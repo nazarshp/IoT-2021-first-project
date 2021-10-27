@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+int main ()
+{
+float x;
+double c,k,min,max;
+ //table1
+ 
+ printf("a=");
+ scanf("%lf",&min);  // Початкова точка,5
+ printf("b=");
+ scanf("%lf",&max);  // Кінцева точка, 8
+ printf("krok=");     
+ scanf("%lf",&k);    // Крок зміни аргументу x 0.2
+
+for ( double h=min; h<max; h+=k )
+{
+       x = h ;
+     printf("x = %.2f",x);    
+  if ( x < 6 )
+ {
+     c = 1/(1-log10( x + 1)); 
+    printf(" res1 c = %.2f\n ", c);
+ }
+  else if ( 6 <= x && x < 7 )
+ {
+  c = sin(cos(x));
+    printf(" res2 c = %.2f\n ", c);
+ }
+ else if ( x <= 8 )
+ {
+    c = log10(exp(x) + pow(x,2));
+    printf(" res3 c = %.2f\n ", c);
+ }
+ else;
+}
+ printf(" THE END1 ! \n");
+ return 0;
+}
